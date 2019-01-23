@@ -1,0 +1,202 @@
+pagetitle: Adam Blake -- Curriculum Vitae
+pdf: /data/cv.pdf
+src: https://github.com/adamblake/cv
+
+name:
+  first: Adam
+  middle: Bradley
+  middle_initial: B.
+  last: Blake
+phone: ~(310)~745~7081
+email: adamblake@g.ucla.edu
+url: "adamblake.github.io"
+social:
+  github: adamblake
+  twitter: theadamattack
+  linkedin: theadamattack
+  google_scholar: elj-XecAAAAJ&hl
+address:
+  line1: UC Los Angeles, Department of Psychology
+  line2: 1285 Franz Hall
+  city: Los Angeles
+  state: CA
+  zip: 90095-1563
+
+research_interest:
+  - topic: Self-assessment During Learning
+    details: What factors influence students’ judgments and decisions about learning? How do these factors inform us about the underlying mechanisms of metacognition?
+  - topic: Educational and Training Applications
+    details: What strategies do students adopt or endorse when approaching different learning materials? How can instruction and learning materials improve students’ judgments of their own learning?
+
+education:
+  - school: University of California, Los Angeles
+    degree: Ph.D.
+    major: Cognitive Psychology
+    minor: Quantitative Psychology
+    year: 2018
+    details: "Dissertation: Factors that influence metacognitive judgments: Effects at encoding, in the presence of diagnostic cues, and after incidental encoding"
+  
+  - school: University of California, Los Angeles
+    degree: M.A.
+    major: Cognitive Psychology
+    year: 2013
+    details: "Thesis: On belief and fluency in the construction of judgments of learning: Assessing and altering the direct effects of belief"
+  
+  - school: California State University, Fresno
+    degree: B.A.
+    major: Psychology
+    minor: Instrumental Music
+    year: 2012
+    details: "Degree honors: Summa cum laude; Scholar, Smittcamp Family Honors College"
+
+publications:
+  - type: Professional Publications
+    file: _self-articles.bib
+  - type: Published and Refereed Conference Abstracts
+    file: _self-posters.bib
+  - type: Manuscripts in Preparation
+    file: _self-in-prep.bib
+  - type: Chapters and Entries in Edited Books
+    file: _self-chapters.bib
+
+research:
+  - dates: Jul 2018 -- Present
+    title: Postdoctoral Fellow
+    place: Teaching and Learning Lab
+    location: University of California, Los Angeles
+    advisor: James W. Stigler
+  - dates: Oct 2012 -- Present
+    title: Researcher
+    place: Memory and Lifespan Cognition Lab
+    location: University of California, Los Angeles
+    advisor: Alan D. Castel
+  - dates: Oct 2012 -- Present
+    title: Researcher
+    place: CogFog Learning and Memory Research Group
+    location: University of California, Los Angeles
+    advisor: Robert A. Bjork, Elizabeth L. Bjork, Alan D. Castel, Barbara Knowlton
+  - dates: Aug 2011 -- May 2012
+    title: Undergraduate Honors Researcher
+    place: Independent Honors Research Project
+    location: California State University, Fresno
+    advisor: Karl M. Oswald, Lorin Lachs
+    details: "Thesis: The effects of the human voice and music on efficacy of study"
+  - dates: Aug 2010 -- May 2012
+    title: Research Assistant
+    place: Memory and Applied Cognition Lab
+    advisor: Karl M. Oswald
+    location: California State University, Fresno
+  - dates: Aug 2010 -- Dec 2012
+    title: Research Assistant
+    place: Judgment and Reasoning Lab
+    location: California State University, Fresno
+    advisor: Paul C. Price
+
+teaching:
+  - type: Independent Research Mentorship
+    location: University of California, Los Angeles
+    items:
+    - item: Crystal Nguyentan -- Undergraduate Research Fellowship Program
+      dates: 2016 -- 2017
+      details: "Thesis: Memory and metamemory for medication side effects in context and out of context"
+    - item: Heather A. Hansen -- Independent Research
+      dates: 2015 -- 2016
+      details: "Thesis: The effect of impression formation on memory for eye colors"
+    - item: Meenely Nazarian -- Psychology Research Opportunity Programs
+      dates: 2013 -- 2014
+      details: "Thesis: Everyday attention and memory for the Apple logo"
+  
+  - type: Lecturer
+    location: University of California, Los Angeles
+    items:
+    - item: PSYCH 100A -- Psychological Statistics
+      dates: Summer 2019
+  
+  - type: Teaching Fellow (Graduate teaching assistant)
+    location: University of California, Los Angeles
+    dates: 2013 -- 2018
+    items:
+    - item: PSYCH 85 -- Intro to Cognitive Science
+      dates: Spring, 2016
+    - item: PSYCH 100A -- Psychological Statistics
+      dates: Spring 2017, 2018
+      details: "Guest Lectures: t-distribution, Paired-samples t-test"
+    - item: PSYCH 100B -- Research Methodology
+      dates: Spring, 2014; Fall, 2014; Summer, 2015, 2016, 2017; Fall 2017
+    - item: PSYCH 120A -- Cognitive Psychology
+      dates: Fall, 2013; Winter, 2015; Fall, 2015; Winter 2016; Fall, 2016, Winter 2018
+      details: "Guest Lectures: Problem Solving, Selective Attention, Language"
+    - item: PSYCH 121 -- Cognitive Psychology Lab
+      dates: Winter, 2014; Spring, 2015; Winter, 2016
+      details: "Guest Lecture: Creating Psychological Experiments Programmatically"
+  
+  - type: Lecturer
+    location: The Berkeley Review (Los Angeles, CA; Irvine, CA)
+    dates: 2015 -- 2017
+    details: Lectures were developed independently to complement lectures at The Berkeley Review and prepare students for relevant portions of the Medical College Admission Test (MCAT)
+    items:
+    - item: Classic Experiments and Disorders
+    - item: Cognitive Psychology I & II
+    - item: Experimental Logic and Methods
+    - item: Sensation and Perception
+
+awards: 
+  - location: University of California, Los Angeles
+    items:
+    - dates: 2017 
+      item: "Nominee: UCLA Academic Senate Distinguished Teaching Assistant"
+    - dates: 2016
+      item: Shepherd Ivory Franz Distinguished Teaching Assistant
+    - dates: 2015
+      item: CCLE Innovation and Development Program Grant
+      value: $3494
+      details: “Developing an online tool that patches, enhances, and extends software capabilities within Research Methods in Psychology”
+    - dates: 2014, 2013
+      item: Graduate Summer Research Mentorship
+      value: $6,000 ea.
+    - dates: 2012
+      item: University Fellowship
+      value: $21,000
+    - dates: 2012
+      item: Edwin W. Pauley Fellowship
+      value: $30,000
+  - location: California State University, Fresno
+    items:
+    - dates: 2008 -- 2012
+      item: President’s Honors Scholarship
+      value: $35,000
+      details: Enrollment in Smittcamp Family Honors College
+    - dates: 2011 -- 2012
+      item: Honors Program in Psychology
+    - dates: 2011
+      item: Carl Levin, College of Science and Mathematics Scholarship
+    - dates: 2011
+      item: Faculty Sponsored Student Research Award
+
+service: 
+  - title: Invited expert
+    dates: Aug. 10th, 2016
+    item: Science of Memory panel
+    location: ArcLight Cinema, Hollywood, CA
+    details: Gave expert opinions and discussion at a panel followed a screening of the film Embers with Claire Carré (writer, director) as part of the Slamdance Film Festival
+  - title: Symposium Director
+    dates: 2013-2016
+    item: The 3rd, 4th, and 5th annual Psychology in Action Symposium
+    location: University of California, Los Angeles
+    details: "Symposia titles: Ballot Behavior: Politics and Psychology; Building Minds: Microchips & Molecules; and Guilty Minds: The Intersection between Psychology and Law"
+  - title: Event Coordinator
+    dates: 2012-2013
+    item: 2nd annual Psychology in Action Symposium
+    location: University of California, Los Angeles
+    details: "Mental Notes: Music, Cognition, and the Brain"
+  - title: Faculty Liaison, Member
+    dates: 2012 -- 2013
+    item: Psychology Graduate Students Association
+
+affiliations:
+  - dates: 2013 -- Present
+    item: Psychonomic Society
+    title: Graduate Student Affiliate
+  - dates: 2014 -- Present
+    item: American Psychological Society
+    title: Graduate Student Affiliate
