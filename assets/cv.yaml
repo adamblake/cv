@@ -1,6 +1,11 @@
 pagetitle: Adam Blake -- Curriculum Vitae
 pdf: /data/cv.pdf
 src: https://github.com/adamblake/cv
+bibliography:
+  - _self-articles.bib
+  - _self-posters.bib
+  - _self-in-prep.bib
+  - _self-chapters.bib
 
 name:
   first: Adam
@@ -22,7 +27,7 @@ address:
   state: CA
   zip: 90095-1563
 
-research_interest:
+research_interests:
   - topic: Self-assessment During Learning
     details: What factors influence students’ judgments and decisions about learning? How do these factors inform us about the underlying mechanisms of metacognition?
   - topic: Educational and Training Applications
