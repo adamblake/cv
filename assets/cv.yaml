@@ -1,18 +1,11 @@
 pagetitle: Adam Blake -- Curriculum Vitae
-pdf: /data/cv.pdf
-src: https://github.com/adamblake/cv
-bibliography:
-  - _self-articles.bib
-  - _self-posters.bib
-  - _self-in-prep.bib
-  - _self-chapters.bib
 
 name:
   first: Adam
   middle: Bradley
   middle_initial: B.
   last: Blake
-phone: ~(310)~745~7081
+phone: (310) 745~7081
 email: adamblake@g.ucla.edu
 url: "adamblake.github.io"
 social:
@@ -26,6 +19,9 @@ address:
   city: Los Angeles
   state: CA
   zip: 90095-1563
+  coordinates:
+    lat: 34.0696733
+    long: -118.4435323
 
 research_interests:
   - topic: Self-assessment During Learning
@@ -40,13 +36,13 @@ education:
     minor: Quantitative Psychology
     year: 2018
     details: "Dissertation: Factors that influence metacognitive judgments: Effects at encoding, in the presence of diagnostic cues, and after incidental encoding"
-  
+
   - school: University of California, Los Angeles
     degree: M.A.
     major: Cognitive Psychology
     year: 2013
     details: "Thesis: On belief and fluency in the construction of judgments of learning: Assessing and altering the direct effects of belief"
-  
+
   - school: California State University, Fresno
     degree: B.A.
     major: Psychology
@@ -110,16 +106,15 @@ teaching:
     - item: Meenely Nazarian -- Psychology Research Opportunity Programs
       dates: 2013 -- 2014
       details: "Thesis: Everyday attention and memory for the Apple logo"
-  
+
   - type: Lecturer
     location: University of California, Los Angeles
     items:
     - item: PSYCH 100A -- Psychological Statistics
       dates: Summer 2019
-  
+
   - type: Teaching Fellow (Graduate teaching assistant)
     location: University of California, Los Angeles
-    dates: 2013 -- 2018
     items:
     - item: PSYCH 85 -- Intro to Cognitive Science
       dates: Spring, 2016
@@ -134,21 +129,21 @@ teaching:
     - item: PSYCH 121 -- Cognitive Psychology Lab
       dates: Winter, 2014; Spring, 2015; Winter, 2016
       details: "Guest Lecture: Creating Psychological Experiments Programmatically"
-  
+
   - type: Lecturer
     location: The Berkeley Review (Los Angeles, CA; Irvine, CA)
     dates: 2015 -- 2017
     details: Lectures were developed independently to complement lectures at The Berkeley Review and prepare students for relevant portions of the Medical College Admission Test (MCAT)
-    items:
+    lectures:
     - item: Classic Experiments and Disorders
     - item: Cognitive Psychology I & II
     - item: Experimental Logic and Methods
     - item: Sensation and Perception
 
-awards: 
+awards:
   - location: University of California, Los Angeles
     items:
-    - dates: 2017 
+    - dates: 2017
       item: "Nominee: UCLA Academic Senate Distinguished Teaching Assistant"
     - dates: 2016
       item: Shepherd Ivory Franz Distinguished Teaching Assistant
@@ -178,22 +173,25 @@ awards:
     - dates: 2011
       item: Faculty Sponsored Student Research Award
 
-service: 
+service:
   - title: Invited expert
     dates: Aug. 10th, 2016
     item: Science of Memory panel
     location: ArcLight Cinema, Hollywood, CA
     details: Gave expert opinions and discussion at a panel followed a screening of the film Embers with Claire Carré (writer, director) as part of the Slamdance Film Festival
+    link: http://www.embersmovie.com/cinema/
   - title: Symposium Director
     dates: 2013-2016
     item: The 3rd, 4th, and 5th annual Psychology in Action Symposium
     location: University of California, Los Angeles
     details: "Symposia titles: Ballot Behavior: Politics and Psychology; Building Minds: Microchips & Molecules; and Guilty Minds: The Intersection between Psychology and Law"
+    link: https://www.psychologyinaction.org/events/
   - title: Event Coordinator
     dates: 2012-2013
     item: 2nd annual Psychology in Action Symposium
     location: University of California, Los Angeles
     details: "Mental Notes: Music, Cognition, and the Brain"
+    link: https://www.psychologyinaction.org/events/
   - title: Faculty Liaison, Member
     dates: 2012 -- 2013
     item: Psychology Graduate Students Association

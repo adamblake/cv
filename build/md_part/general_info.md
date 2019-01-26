@@ -1,12 +1,14 @@
 # Adam B. Blake
 
-<i class="fas fa-at"></i>adamblake\@g.ucla.edu  
-<i class="fas fa-phone-volume"></i>\~(310)\~745\~7081  
+<a href="mailto:adamblake\@g.ucla.edu"><i class="fas fa-at"></i> adamblake\@g.ucla.edu</a>
 
-<i class="fab fa-twitter"></i>adamblake  
-<i class="fab fa-twitter"></i>theadamattack  
-<i class="fab fa-twitter"></i>theadamattack  
-<i class="fab fa-twitter"></i>elj-XecAAAAJ&hl
+<a href="https://www.github.com/adamblake"><i class="fab fa-github"></i> GitHub</a>
+ 
+<a href="https://www.twitter.com/theadamattack"><i class="fab fa-twitter"></i> Twitter</a>
+  
+<a href="https://www.linkedin.com/in/theadamattack"><i class="fab fa-linkedin"></i> LinkedIn</a>
+
+<a href="https://scholar.google.com/citations?user=elj-XecAAAAJ&hl"><i class="fab fa-twitter"></i> Google Scholar</a>
 
 UC Los Angeles, Department of Psychology  
 1285 Franz Hall  
