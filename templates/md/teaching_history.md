@@ -1,19 +1,27 @@
 # Teaching History
+
 $for(teaching)$
 ## $teaching.type$
 
 ### $teaching.location$
+$if(teaching.dates)$
 
-$if(teaching.dates)$$teaching.dates$  $endif$
-$if(teaching.details)$$teaching.details$$endif$
+$teaching.dates$
+$endif$
+$if(teaching.items)$$for(teaching.items)$
 
-$for(teaching.items)$  
 $teaching.items.item$  
 $teaching.items.dates$  
-$if(teaching.items.details)$
-$teaching.items.details$  
+$endfor$$endif$
+$if(teaching.details)$
+$teaching.details$
 $endif$
+$if(teaching.lectures)$
 
+#### Lectures
+$for(teaching.lectures)$
+
+$teaching.lectures.item$
 $endfor$
-
+$endif$
 $endfor$

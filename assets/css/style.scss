@@ -2,3 +2,13 @@
 ---
 
 @import "{{ site.theme }}";
+
+$primary-color: #007BFF;
+
+a { color: $primary-color; }
+a:hover, a:focus { color: $primary-color; }
+
+.grow { transition: all .1s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+#social { text-align: justify; }

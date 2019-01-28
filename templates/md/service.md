@@ -2,10 +2,8 @@
 $for(service)$  
 $service.dates$  
 $service.title$  
-$service.item$  
+$if(service.link)$<a href="$service.link$">$service.item$</a>  $endif$  
 $service.location$  
-$if(service.details)$
-$service.details$  
-$endif$
+$if(service.details)$$service.details$  $endif$
 
 $endfor$
