@@ -1,3 +1,11 @@
+
 *.sublime-project
 *.sublime-workspace
 .idea/*
+
+# local jekyll
+_site/*
+GemFile*
+
+# other
+TODO

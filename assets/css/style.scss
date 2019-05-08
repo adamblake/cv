@@ -1,14 +1,258 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
+// variable definitions
 $primary-color: #007BFF;
+$text-color: #727272;
+$font-size: 14px;
+$info-bar-width: 270px;
+$main-width: 500px;
 
-a { color: $primary-color; }
-a:hover, a:focus { color: $primary-color; }
 
-.grow { transition: all .1s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
 
-#social { text-align: justify; }
+
+
+// base css from github minimal theme by orderedlist
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Noto-Sans-regular/Noto-Sans-regular.eot");
+  src: url("../fonts/Noto-Sans-regular/Noto-Sans-regular.eot?#iefix") format("embedded-opentype"), local("Noto Sans"), local("Noto-Sans-regular"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff2") format("woff2"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.woff") format("woff"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.ttf") format("truetype"), url("../fonts/Noto-Sans-regular/Noto-Sans-regular.svg#NotoSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/Noto-Sans-700/Noto-Sans-700.eot");
+  src: url("../fonts/Noto-Sans-700/Noto-Sans-700.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold"), local("Noto-Sans-700"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff2") format("woff2"), url("../fonts/Noto-Sans-700/Noto-Sans-700.woff") format("woff"), url("../fonts/Noto-Sans-700/Noto-Sans-700.ttf") format("truetype"), url("../fonts/Noto-Sans-700/Noto-Sans-700.svg#NotoSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot");
+  src: url("../fonts/Noto-Sans-italic/Noto-Sans-italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Italic"), local("Noto-Sans-italic"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff2") format("woff2"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.woff") format("woff"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.ttf") format("truetype"), url("../fonts/Noto-Sans-italic/Noto-Sans-italic.svg#NotoSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot");
+  src: url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.eot?#iefix") format("embedded-opentype"), local("Noto Sans Bold Italic"), local("Noto-Sans-700italic"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff2") format("woff2"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.woff") format("woff"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.ttf") format("truetype"), url("../fonts/Noto-Sans-700italic/Noto-Sans-700italic.svg#NotoSans") format("svg");
+}
+
+
+
+
+
+h1, h2, h3 {
+  line-height: 1.1;
+}
+
+h1 {
+  color: darken($text-color, 30%);
+  font-size: 1.6em;
+}
+
+h2 {
+  color: darken($text-color, 20%);
+  font-size: 1.3em;
+}
+
+h3, h4, h5, h6 {
+  color: darken($text-color, 10%);
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: $primary-color;
+  font-weight: 700;
+}
+
+strong {
+  color: #222;
+  font-weight: 700;
+}
+
+small {
+  font-size: .7em;
+}
+
+
+
+
+
+body {
+  background-color: #ffffff;
+  padding: 1em;
+  font: $font-size "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: $text-color;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+header, footer {
+  text-align: center;
+}
+
+header, footer, section {
+  padding: 1em 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+section {
+  border-color: lighten($text-color, 30%);
+  border-style: solid none;
+  border-width: 1px 0;
+}
+
+.address {
+  padding: 2em 0;
+}
+
+.references div p {
+  text-indent: -2em;
+  margin-left: 2em;
+}
+
+
+
+
+// image
+.site-picture {
+  border-radius: 2em;
+  max-width: 12em;
+}
+
+// social media icons
+.contact p {
+  padding: .8em 0;
+}
+
+.grow {
+  transition: all .1s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.2);
+}
+
+.social {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.fa-fw {
+  text-align: center;
+  width: 1.25em;
+}
+
+
+
+
+
+// cards
+.card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: top;
+  margin-bottom: 20px;
+
+  .card-left {
+    padding: 0 1em 0 0;
+    flex: 3;
+  }
+
+  .card-right {
+    padding: 0 1em;
+    flex: 8;
+  }
+}
+
+
+
+
+
+// responsive queries
+@media print, screen and (min-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    div {
+      flex: 1;
+    }
+  }
+}
+
+@media print, screen and (min-width: 720px) {
+  .card .card-left {
+    flex: 2;
+  }
+  .wrapper {
+    width: 860px;
+    margin: 0 auto;
+  }
+}
+
+@media print, screen and (min-width: 960px) {
+  body {
+    margin: 50px;
+  }
+  section {
+    border: none;
+    width:500px;
+    float:right;
+    padding-bottom:50px;
+  }
+  header, footer {
+    width: 270px;
+    display: block;
+    position: fixed;
+    float: left;
+    padding-right: 3em;
+  }
+  footer {
+    bottom: 50px;
+  }
+}
+
+
+@media print {
+  @page {
+    size: letter;
+    margin: .75in .5in;
+  }
+
+  html, body {
+    height: 99%;
+    font-size: 12pt;
+    margin-top: 0;
+  }
+
+  header, footer, section {
+    width: auto;
+    float: none;
+    position: static;
+    border: none;
+  }
+
+  .social {
+    display: none;
+  }
+
+  a {
+    color: $text-color;
+  }
+}

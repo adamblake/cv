@@ -1,0 +1,36 @@
+{% assign contact = site.data.cv.contact %}
+
+<h1>{{ contact.name.first }} {{ contact.name.middle_initial }} {{ contact.name.last }}</h1>
+
+<h2>Curriculum Vitae</h2>
+
+<img class="site-picture" src="https://www.gravatar.com/avatar/900b543b2e76ec739210f5dfbf1c92e5?s=200" />
+
+<div class="contact">
+  <p>
+    <a href="mailto:{{contact.email}}">
+      <i class="fa-fw grow fas fa-envelope"></i>
+      {{ contact.email }}
+    </a>
+  </p>
+
+  <p class="social">
+    <a href="https://www.github.com/{{ contact.social.github }}" target="_blank">
+      <i class="fa-3x fa-fw grow fab fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/{{ contact.social.linkedin }}" target="_blank">
+      <i class="fa-3x fa-fw grow fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://scholar.google.com/citations?user={{ contact.social.google_scholar }}" target="_blank">
+      <i class="ai-3x fa-fw grow ai ai-google-scholar"></i>
+    </a>
+  </p>
+
+  <p>
+    {{ contact.address.line1 }}  <br>
+    {{ contact.address.line2 }}  <br>
+    {{ contact.address.city }}, {{ contact.address.state }}&nbsp;&nbsp;{{ contact.address.zip }}
+  </p>
+</div>

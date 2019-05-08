@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- SEO -->
-    {% seo %}
+  <!-- SEO -->
+  {% seo %}
 
-    <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icons/apple-touch-icon-180.png" | relative_url }}" />
-    <link rel="icon" type="image/png" href="{{ "/assets/icons/favicon-32.png" | relative_url }}" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{ "/assets/icons/favicon-16.png" | relative_url }} sizes="16x16" />
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icons/apple-touch-icon-180.png" | relative_url }}" />
+  <link rel="icon" type="image/png" href="{{ "/assets/icons/favicon-32.png" | relative_url }}" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ "/assets/icons/favicon-16.png" | relative_url }} sizes=" 16x16" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
-    <link rel="stylesheet" crossorigin="anonymous" href="//use.fontawesome.com/releases/v5.6.3/css/all.css"
-          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/">
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+  <link rel="stylesheet" crossorigin="anonymous" href="//use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/">
+  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
 
-    <!-- Scripts -->
-    <!--[if lt IE 9]>
+  <!-- Compatibility -->
+  <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
-<div class="wrapper">
+  <div class="wrapper">
     <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        {% if site.picture %}
-        <img src="{{site.picture | relative_url}}" alt="Face photo" />
-        {% endif %}
+      <div>
+        {% include header.html %}
+      </div>
     </header>
+
     <section>
-        {{ content }}
+      {{ content }}
     </section>
+
     <footer>
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      {% if site.github.is_project_page %}
+      <p class="view"><a href="{{ site.github.repository_url }}" target="_blank">
+      View the source code on GitHub: {{ site.github.repository_nwo }}</a></p>
+      {% endif %}
     </footer>
-</div>
-<script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-{% if site.google_analytics %}
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', '{{ site.google_analytics }}', 'auto');
-ga('send', 'pageview');
-</script>
-{% endif %}
+  </div>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="{{ "/assets/js/script.js?v=" | append: site.github.build_revision | relative_url }}"></script>
+  {% if site.google_analytics %}
+  <script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+  </script>
+  {% endif %}
 </body>
 </html>
