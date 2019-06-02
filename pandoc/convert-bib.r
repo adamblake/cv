@@ -1,44 +1,69 @@
 convert_bib <- function() {
-  # requires purrr and readr
+  library(dplyr)
+  library(purrr)
+  library(readr)
+  library(stringr)
 
-  find_root <- function(current_dir = ".") {
-    files <- dir(current_dir, "_data|_includes|_layouts")
-    if (length(files) == 0) {
-      current_dir <- find_root(file.path(current_dir, ".."))
-    }
-    current_dir
+  find_root <- function(current = ".") {
+    files <- dir(current, "_data|_includes|_layouts")
+    if (length(files) == 0) find_root(file.path(current, "..")) else current
   }
 
   pandoc_convert <- function(type, out_dir, bib_dir) {
     bib_file <- sprintf("_self-%s.bib", type)
     bib <- sprintf("--bibliography=%s", file.path(bib_dir, bib_file))
-    out <- sprintf("-o %s.html", file.path(out_dir, type))
-    csl <- "--csl=apa.csl"
+    out_file <- sprintf("%s.html", file.path(out_dir, type))
+    csl <- "--csl=custom_apa.csl"
 
     call_string <- sprintf(
-      "pandoc pubs_template.md %s -t html %s --filter=pandoc-citeproc %s",
-      out, bib, csl
+      "pandoc pubs_template.md -o %s -t html %s --filter=pandoc-citeproc %s",
+      out_file, bib, csl
     )
     system(call_string)
   }
 
-  fix_nd <- function(type, replacement, html_dir) {
-    html_file <- sprintf("%s.html", file.path(html_dir, type))
-    raw_text <- readr::read_file(html_file)
-    mod_text <- gsub("\\(n\\.d\\.\\)", sprintf("(%s)", replacement), raw_text)
-    readr::write_file(mod_text, html_file)
-  }
+  # customize CSL to sort by year then author
+  # don't sort descending here because "submitted" will end up at bottom
+  # reverse sorting happens at the end of the walk below
+  read_file("apa.csl") %>%
+    str_replace(
+      '(<sort>\\s+)(<key macro="author"/>\\s+)(<key macro="issued-sort" sort="ascending"/>\\s+)',
+      "\\1\\3\\2"
+    ) %>%
+    write_file("custom_apa.csl")
 
-  root_dir <- find_root()
-  out_dir <- file.path(root_dir, "_includes")
-  bib_dir <- file.path(root_dir, "_data", "bibtex")
+  # convert files
+  out_dir <- file.path(find_root(), "_includes")
+  bib_dir <- file.path(find_root(), "_data", "bibtex")
 
-  purrr::walk(c("articles", "chapters", "in-prep", "software", "posters"),
-              pandoc_convert, out_dir = out_dir, bib_dir = bib_dir)
-  purrr::walk2(c("articles", "in-prep"), c("under review", "in-prep."),
-               fix_nd, html_dir = out_dir)
+  walk(c("articles", "chapters", "in-prep", "software", "posters"), function(type) {
+    pandoc_convert(type, out_dir, bib_dir)
+    filename <- sprintf("%s.html", file.path(out_dir, type))
+    cleaned <- read_file(filename) %>%
+      # strip letters from citation year
+      str_replace_all(
+        "(&amp; \\w+\\, \\w\\. (?:\\w\\. )*)\\((\\d{4})\\w\\)\\.",
+        "\\1(\\2)."
+      ) %>%
 
-  invisible(NULL)
+      # replace (n.d.) with "(under review)" or "(in-prep.)"
+      str_replace_all(
+        "\\(n\\.d\\.\\)",
+        if (type == "in-prep") "(in-prep.)" else "(under review)"
+      ) %>%
+
+      # reverse sort by citation year
+      ## convert citations to one-liners
+      str_remove_all("\r?\n") %>%
+      str_replace_all('(</p></div>|role="doc-bibliography">)', "\\1\n") %>%
+      ## convert to array
+      str_split("\r?\n") %>% .[[1]] %>%
+      ## reverse citation order
+      {idx <- 2:(length(.) - 1); .[idx] <- .[rev(idx)]; .} %>%
+
+      # write the resulting array
+      write_lines(filename)
+  })
 }
 
 convert_bib()
