@@ -154,24 +154,3 @@ title: Adam Blake
 </div>
 {% endfor %}
 {% endfor %}
-
-
-# Affiliations
-
-{% for item in site.data.cv.affiliations %}
-<div class="card">
-  <div class="card-left">
-    {{ item.dates }}
-  </div>
-  <div class="card-right">
-    <strong>
-      {% if item.link %}
-      <a href="{{ item.link }}" target="_blank">{{ item.item }}</a>
-      {% else %}
-      {{ item.item }}
-      {% endif %}
-    </strong><br>
-    {{ item.title }}
-  </div>
-</div>
-{% endfor %}
