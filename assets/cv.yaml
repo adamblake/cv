@@ -50,28 +50,18 @@ education:
     year: 2012
     details: "Degree honors: Summa cum laude; Scholar, Smittcamp Family Honors College"
 
-publications:
-  - type: Professional Publications
-    file: _self-articles.bib
-  - type: Published and Refereed Conference Abstracts
-    file: _self-posters.bib
-  - type: Manuscripts in Preparation
-    file: _self-in-prep.bib
-  - type: Chapters and Entries in Edited Books
-    file: _self-chapters.bib
-
 research:
   - dates: Jul 2018 -- Present
     title: Postdoctoral Fellow
     place: Teaching and Learning Lab
     location: University of California, Los Angeles
     advisor: James W. Stigler
-  - dates: Oct 2012 -- Present
+  - dates: Oct 2012 -- Jun 2019
     title: Researcher
     place: Memory and Lifespan Cognition Lab
     location: University of California, Los Angeles
     advisor: Alan D. Castel
-  - dates: Oct 2012 -- Present
+  - dates: Oct 2012 -- Jun 2019
     title: Researcher
     place: CogFog Learning and Memory Research Group
     location: University of California, Los Angeles
@@ -111,7 +101,7 @@ teaching:
     location: University of California, Los Angeles
     items:
     - item: PSYCH 100A -- Psychological Statistics
-      dates: Summer 2019
+      dates: Summer 2019 (Session A), Summer 2020 (Sessions A & C)
 
   - type: Teaching Fellow (Graduate teaching assistant)
     location: University of California, Los Angeles

@@ -1,156 +1,201 @@
 ﻿---
 title: Adam Blake
 ---
-# Research Interests
 
+# Research Interests
 {% for interest in site.data.cv.research_interests %}
+
 ## {{ interest.topic }}
+
 {{ interest.details }}
+
 {% endfor %}
+
 
 
 # Education
-
 {% for ed in site.data.cv.education %}
-<div class="card">
-  <div class="card-left">
-    {{ ed.year }}
-  </div>
-  <div class="card-right">
-    <strong>{{ ed.degree }} in {{ ed.major }}</strong>{% if ed.minor %}  <br>
-    <strong>Minor in {{ ed.minor }}</strong>{% endif %}<br>
-    <em>{{ ed.school }}</em><br>
-    {{ ed.details }}
-  </div>
-</div>
+
+{% include card_education.html
+  year=ed.year
+  degree=ed.degree
+  major=ed.major
+  minor=ed.minor
+  school=ed.school
+  details=ed.details
+%}
+
 {% endfor %}
+
 
 
 # Publications
 
 ## Professional Publications
 
-{% include articles.html %}
+<div class="references">
+  {% capture my_include %}{% include_relative publications/articles.md %}{% endcapture %}
+  {{ my_include | markdownify }}
+</div>
+
 
 ## Software
 
-{% include software.html %}
+<div class="references">
+  {% capture my_include %}{% include_relative publications/software.md %}{% endcapture %}
+  {{ my_include | markdownify }}
+</div>
+
 
 ## Chapters and Entries in Edited Books
 
-{% include chapters.html %}
+<div class="references">
+  {% capture my_include %}{% include_relative publications/chapters.md %}{% endcapture %}
+  {{ my_include | markdownify }}
+</div>
 
 ## Manuscripts in Preparation
 
-{% include in-prep.html %}
+<div class="references">
+{% capture my_include %}{% include_relative publications/in-prep.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>
+
 
 ## Published and Refereed Conference Abstracts
 
-{% include posters.html %}
+<div class="references">
+{% capture my_include %}{% include_relative publications/posters.md %}{% endcapture %}
+{{ my_include | markdownify }}
+</div>
+
+
+
+# Grants
+
+{% for item in site.data.cv.grants %}
+
+{% capture title %}
+  {{ item.title }} | <em>{{ item.value }}</em>
+{% endcapture %}
+
+{% include card.html
+  margin=item.dates
+  title=title
+  details=item.location
+  more_details=item.details
+%}
+
+{% endfor %}
+
 
 
 # Research History
 
 {% for item in site.data.cv.research %}
-<div class="card">
-  <div class="card-left">
-    {{ item.dates }}
-  </div>
-  <div class="card-right">
-    <strong>{{ item.title }}</strong><br>
-    <strong>{{ item.item }}</strong><br>
-    {{ item.advisor }}<br>
-    <em>{{ item.location }}</em>{% if item.details %}<br>
-    {{ item.details }}{% endif %}
-  </div>
-</div>
+{% include card.html
+  margin=item.dates
+  title=item.title
+  subtitle=item.item
+  details=item.location
+  more_details=item.advisor
+  even_more_details=item.details
+%}
 {% endfor %}
+
 
 
 # Mentorships
 
 {% for item in site.data.cv.mentorship %}
-<div class="card">
-  <div class="card-left">
-    {{ item.dates }}
-  </div>
-  <div class="card-right">
-    <strong>{{ item.name }}</strong><br>
-    <strong>{{ item.item }}</strong><br>
-    <em>{{ item.location }}</em><br>
-    {{ item.details }}
-  </div>
-</div>
+{% include card.html
+  margin=item.dates
+  title=item.name
+  subtitle=item.item
+  details=item.location
+  more_details=item.details
+%}
 {% endfor %}
+
 
 
 # Teaching History
 
-{% for teaching in site.data.cv.teaching %}
-## {{ teaching.location }}
+## Lecturer
 
-*{{ teaching.type }}{% if teaching.dates %} — {{ teaching.dates }}{% endif %}*
-
-{{ teaching.details }}
-
-{% for item in teaching.items %}
-<div class="card">
-  <div class="card-left">
-    {{ item.code }}
-  </div>
-  <div class="card-right">
-    <strong>{{ item.item }}</strong>{% if item.details %}<br>
-    {{ item.details }}{% endif %}<br>
-    <em>{{ item.dates }}</em>
-  </div>
-</div>
-
-{% endfor %}
+{% for position in site.data.cv.teaching %}
+{% include card.html
+  margin=position.dates
+  title=position.course
+  details=position.location
+  more_details=position.details
+%}
 {% endfor %}
 
+## Graduate Teaching Assistant
 
-# Service
+### University of California, Los Angeles
 
-{% for item in site.data.cv.service %}
-<div class="card">
-  <div class="card-left">
-    {{ item.dates }}
-  </div>
-  <div class="card-right">
-    <strong>
-      {{ item.title }}<br>
-      {% if item.link %}
-      <a href="{{ item.link }}" target="_blank">{{ item.item }}</a>
-      {% else %}
-      {{ item.item }}
-      {% endif %}
-    </strong><br>
-    <em>{{ item.location }}</em>{% if item.details %}<br>
-    {{ item.details }}{% endif %}
-  </div>
-</div>
+{% for position in site.data.cv.teaching_assisting %}
+{% include card.html
+  title=position.course
+  details=position.dates
+  more_details=position.details
+%}
 {% endfor %}
+
 
 
 # Honors and Awards
 
 {% for location in site.data.cv.awards %}
-## {{ location.location }}
-
 {% for item in location.items %}
-<div class="card">
-  <div class="card-left">
-    {{ item.dates }}
-  </div>
-  <div class="card-right">
-    <strong>
-      {% if item.link %}
-      <a href="{{ item.link }}" target="_blank">{{ item.item }}</a>
-      {% else %}
-      {{ item.item }}
-      {% endif %}
-    </strong>{% if item.details or item.value %}<br>{{ item.details }} <em>{{ item.value }}</em>{% endif %}
-  </div>
-</div>
+
+{% capture title %}
+  {% include link_or_text.html
+    link=item.link
+    text=item.item
+  %}
+{% endcapture %}
+
+{% include card.html
+  margin=item.dates
+  title=title
+  subtitle=item.details
+  details=location.location
+  more_details=item.value
+%}
+
 {% endfor %}
+{% endfor %}
+
+
+
+# Service
+
+{% for item in site.data.cv.service %}
+
+{% capture subtitle %}
+  {% include link_or_text.html
+    link=item.link
+    text=item.item
+  %}
+{% endcapture %}
+
+{% include card.html
+  margin=item.dates
+  title=item.title
+  subtitle=subtitle
+  details=item.location
+  more_details=item.details
+%}
+
+{% endfor %}
+
+
+
+# Additional Proficiencies
+
+{% for qualification in site.data.cv.qualifications %}
+{{ qualification.level }} &nbsp;&nbsp; {{ qualification.name }} <br>
 {% endfor %}

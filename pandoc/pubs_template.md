@@ -1,4 +1,0 @@
----
-title: bibliography template
-nocite: '@*'
----

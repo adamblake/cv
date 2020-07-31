@@ -1,0 +1,12 @@
+{% capture right %}
+  <strong>{{ include.degree }} in {{ include.major }}</strong> <br>
+
+  {% if include.minor %}
+  <strong>Minor in {{ include.minor }}</strong> <br>
+  {% endif %}
+
+  <em>{{ include.school }}</em> <br>
+  {{ include.details }}
+{% endcapture %}
+
+{% include card_base.html left=include.year right=right %}

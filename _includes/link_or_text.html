@@ -1,0 +1,5 @@
+{% if include.link %}
+  <a href="{{ include.link }}" target="_blank">{{ include.text }}</a>
+  {% else %}
+  {{ include.text }}
+{% endif %}

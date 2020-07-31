@@ -36,34 +36,25 @@ education:
     major: Cognitive Psychology
     minor: Quantitative Psychology
     year: 2018
-    details: "Dissertation: Factors that influence metacognitive judgments: Effects at encoding, in the presence of diagnostic cues, and after incidental encoding"
+    details: |
+      Dissertation: Factors that influence metacognitive judgments: Effects at
+      encoding, in the presence of diagnostic cues, and after incidental encoding
 
   - school: University of California, Los Angeles
     degree: M.A.
     major: Cognitive Psychology
     year: 2013
-    details: "Thesis: On belief and fluency in the construction of judgments of learning: Assessing and altering the direct effects of belief"
+    details: |
+      Thesis: On belief and fluency in the construction of judgments of learning:
+      Assessing and altering the direct effects of belief
 
   - school: California State University, Fresno
     degree: B.A.
     major: Psychology
     minor: Instrumental Music
     year: 2012
-    details: "Degree honors: Summa cum laude; Scholar, Smittcamp Family Honors College"
-
-
-publications:
-  - type: Professional Publications
-    file: _self-articles.bib
-
-  - type: Published and Refereed Conference Abstracts
-    file: _self-posters.bib
-
-  - type: Manuscripts in Preparation
-    file: _self-in-prep.bib
-
-  - type: Chapters and Entries in Edited Books
-    file: _self-chapters.bib
+    details: |
+      Degree honors: Summa cum laude; Scholar, Smittcamp Family Honors College
 
 
 research:
@@ -73,13 +64,13 @@ research:
     location: University of California, Los Angeles
     advisor: James W. Stigler
 
-  - dates: 2012 –
+  - dates: 2012 – 2019
     title: Researcher
     item: Memory and Lifespan Cognition Lab
     location: University of California, Los Angeles
     advisor: Alan D. Castel
 
-  - dates: 2012 –
+  - dates: 2012 – 2019
     title: Researcher
     item: CogFog Learning and Memory Research Group
     location: University of California, Los Angeles
@@ -110,55 +101,86 @@ mentorship:
     item: Undergraduate Research Fellowship Program
     dates: 2016 – 2017
     location: University of California, Los Angeles
-    details: "Thesis: Memory and metamemory for medication side effects in context and out of context"
+    details: |
+      Thesis: Memory and metamemory for medication side effects in context and
+      out of context
 
   - name: Heather A. Hansen
     item: Independent Research
     dates: 2015 – 2016
     location: University of California, Los Angeles
-    details: "Thesis: The effect of impression formation on memory for eye colors"
+    details: |
+      Thesis: The effect of impression formation on memory for eye colors
 
   - name: Meenely Nazarian
     item: Psychology Research Opportunity Programs
     dates: 2013 – 2014
     location: University of California, Los Angeles
-    details: "Thesis: Everyday attention and memory for the Apple logo"
+    details: |
+      Thesis: Everyday attention and memory for the Apple logo
 
 
 teaching:
-  - type: Lecturer
+  - role: Lecturer
+    course: "PSYCH 100A: Psychological Statistics"
+    dates: 2019 – 2020
     location: University of California, Los Angeles
-    items:
-    - item: Psychological Statistics
-      code: PSYCH 100A
-      dates: Summer 2019
+    details: Summer 2019 (SSA); Summer 2020 (SSA & SSC)
 
-  - type: Graduate Teaching Assistant
-    location: University of California, Los Angeles
-    items:
-    - item: Intro to Cognitive Science
-      code: PSYCH 85
-      dates: Spring, 2016
-    - item: Psychological Statistics
-      code: PSYCH 100A
-      dates: Spring 2017, 2018
-      details: "Guest Lectures: t-distribution, Paired-samples t-test"
-    - item: Research Methodology
-      code: PSYCH 100B
-      dates: Spring, 2014; Fall, 2014; Summer, 2015, 2016, 2017; Fall 2017
-    - item: Cognitive Psychology
-      code: PSYCH 120A
-      dates: Fall, 2013; Winter, 2015; Fall, 2015; Winter 2016; Fall, 2016, Winter 2018
-      details: "Guest Lectures: Problem Solving, Selective Attention, Language"
-    - item: Cognitive Psychology Lab
-      code: PSYCH 121
-      dates: Winter, 2014; Spring, 2015; Winter, 2016
-      details: "Guest Lecture: Creating Psychological Experiments Programmatically"
-
-  - type: Lecturer
-    location: The Berkeley Review (Los Angeles, CA; Irvine, CA)
+  - role: Lecturer
+    course: The Berkeley Review
     dates: 2015 – 2017
-    details: Lectures **Classic Experiments and Disorders**, **Cognitive Psychology I & II**, **Experimental Logic and Methods**, and **Sensation and Perception** were prepared independently by me to complement lectures at The Berkeley Review and prepare students for relevant portions of the Medical College Admission Test (MCAT).
+    location: Los Angeles, CA; Irvine, CA
+    details: |
+      Independently prepared and taught lectures to prepare students for
+      relevant portions of the Medical College Admission Test (MCAT). Lectures
+      included
+      <ul>
+        <li>Classic Experiments and Disorders</li>
+        <li>Cognitive Psychology I & II</li>
+        <li>Experimental Logic and Methods</li>
+        <li>Sensation & Perception</li>
+      </ul>
+
+teaching_assisting:
+  - course: "PSYCH 85: Intro to Cognitive Science"
+    dates: Spring, 2016
+
+  - course: "PSYCH 100A: Psychological Statistics"
+    dates: Spring 2017, 2018
+    details: |
+      Guest Lectures: t-distribution, Paired-samples t-test
+
+  - course: "PSYCH 100B: Research Methodology"
+    dates: Spring, 2014; Fall, 2014; Summer, 2015, 2016, 2017; Fall 2017
+
+  - course: "PSYCH 120A: Cognitive Psychology"
+    dates: Fall, 2013; Winter, 2015; Fall, 2015; Winter 2016; Fall, 2016, Winter 2018
+    details: |
+      Guest Lectures: Problem Solving, Selective Attention, Language
+
+  - course: "PSYCH 121: Cognitive Psychology Lab"
+    dates: Winter, 2014; Spring, 2015; Winter, 2016
+    details: |
+      Guest Lecture: Creating Psychological Experiments Programmatically
+
+
+grants:
+  - dates: 2020
+    title: McMaster COVID-19 Research Fund
+    location: McMaster University (Hamilton, Ontario, Canada)
+    value: $44862
+    details: |
+      Incorporating active learning techniques in online classrooms
+
+  - dates: 2015
+    title: CCLE Innovation and Development Program Grant
+    location: University of California, Los Angeles
+    value: $3494
+    details: |
+      Developing an online tool that patches, enhances, and extends software
+      capabilities within Research Methods in Psychology
+
 
 awards:
   - location: University of California, Los Angeles
@@ -168,10 +190,6 @@ awards:
       link: https://senate.ucla.edu/funding-opportunities/awards/DTA
     - dates: 2016
       item: Shepherd Ivory Franz Distinguished Teaching Assistant
-    - dates: 2015
-      item: CCLE Innovation and Development Program Grant
-      value: $3494
-      details: “Developing an online tool that patches, enhances, and extends software capabilities within Research Methods in Psychology”
     - dates: 2014, 2013
       item: Graduate Summer Research Mentorship
       value: $6,000 ea.
@@ -226,8 +244,36 @@ service:
 affiliations:
   - dates: 2013 – current
     item: Psychonomic Society
-    title: Graduate Student Affiliate
+    title: Member
 
-  - dates: 2014 – current
-    item: American Psychological Society
-    title: Graduate Student Affiliate
+
+qualifications:
+  - name: R statistics
+    level: ⬤⬤⬤⬤⬤
+
+  - name: R package development
+    level: ⬤⬤⬤⬤⬤
+
+  - name: Jupyter notebooks
+    level: ⬤⬤⬤⬤⬤
+
+  - name: git / GitHub
+    level: ⬤⬤⬤⬤⭘
+
+  - name: Javascript / HTML / CSS
+    level: ⬤⬤⬤⬤⭘
+
+  - name: GitHub-Pages / Jekyll / Liquid
+    level: ⬤⬤⬤⭘⭘
+
+  - name: Python
+    level: ⬤⬤⬤⭘⭘
+
+  - name: PHP
+    level: ⬤⬤⬤⭘⭘
+
+  - name: Music Theory / Scoring
+    level: ⬤⬤⬤⬤⭘
+
+  - name: Guitar
+    level: ⬤⬤⬤⭘⭘

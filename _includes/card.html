@@ -1,0 +1,28 @@
+<div class="card">
+
+  <div class="card-left">
+    {{ include.margin }}
+  </div>
+
+  <div class="card-right">
+
+    <strong>{{ include.title }}</strong> <br>
+
+    {% if include.subtitle %}
+    <strong>{{ include.subtitle }}</strong> <br>
+    {% endif %}
+
+    {% if include.details %}
+    <em>{{ include.details }}</em> <br>
+    {% endif %}
+
+    {% if include.more_details %}
+    {{ include.more_details }} <br>
+    {% endif %}
+
+    {% if include.even_more_details %}
+    {{ include.even_more_details }} <br>
+    {% endif %}
+
+  </div>
+</div>
